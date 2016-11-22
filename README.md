@@ -6,7 +6,24 @@ The following is an example of usage of the ChipWhisperer API to perform the fol
 
 Objective: Command-line programmer that writes a .hex file. Optional GUI can be used too, but by default provides a simple command-line interface.
 
-Status: TODO
+Status: Done
+
+Running `cwlite_program.py simeplserial-aes-xmega.hex` should program the file into the XMEGA device, with the following output:
+
+```
+<BUNCH OF MESSAGES>
+['OpenADC', 'Clock Setup', 'CLKGEN Settings', 'Multiply', 2],
+['OpenADC', 'Clock Setup', 'CLKGEN Settings', 'Divide', 26],
+['OpenADC', 'Clock Setup', 'ADC Clock', 'Reset ADC DCM', None],
+['OpenADC', 'Clock Setup', 'ADC Clock', 'Phase Adjust', 0],
+Detected XMEGA128D4
+Attempting to program simeplserial-aes-xmega.hex to XMEGA
+XMEGA Programming flash...
+XMEGA Reading flash...
+Verified flash OK, 3067 bytes
+```
+
+Note running the file on it's own will connect & open the GUI programmer.
 
 ## Send measurement queries from Matlab ##
 
