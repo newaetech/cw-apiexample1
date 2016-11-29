@@ -6,9 +6,9 @@ You will need to first install Python 2.7 + ChipWhisperer. Note you'll need matc
 
 The easiest method is to install WinPython - be sure to select the 2.7 version, you CANNOT USE Python 3.x with ChipWhisperer.
 
-See XXXTODOXXX for full details. Note you MUST INSTALL the ChipWhisperer Python package, and ensure it works stand-alone before attempting the MATLAB interface. The MATLAB interface provides little error reporting, so you'll have difficulty using it without first getting the system working stand-alone.
+See https://wiki.newae.com/MATLAB_Control_of_CW-Lite for full details. Note you MUST INSTALL the ChipWhisperer Python package, and ensure it works stand-alone before attempting the MATLAB interface. The MATLAB interface provides little error reporting, so you'll have difficulty using it without first getting the system working stand-alone.
 
-Again see XXXTODOXXX for full details.
+Again see https://wiki.newae.com/MATLAB_Control_of_CW-Lite for full details.
 
 ## Setup - MATLAB
 
@@ -47,7 +47,7 @@ This will let you import Python packages (including ChipWhisperer).
 
 ## Running Examples
 
-Again see XXXTODOXXX for full details, the following is a brief summary:
+Again see https://wiki.newae.com/MATLAB_Control_of_CW-Lite for full details, the following is a brief summary:
 
 To run the examples, first set your MATLAB folder to the cw-apiexample\matlab folder. You should then be able to run the following from your MATLAB prompt:
 
