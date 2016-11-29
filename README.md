@@ -29,7 +29,9 @@ Note running the file on it's own will connect & open the GUI programmer.
 
 Objective: Send simple encryption queries from Matlab, of the form measure_AES(plaintext,key), which would return a ciphertext and the leakage trace.
 
-Status: TODO
+Status: Done
+
+See details in the MATLAB folder.
 
 ## Send fault queries from Matlab ##
 
