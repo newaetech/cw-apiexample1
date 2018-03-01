@@ -1,11 +1,11 @@
-function [ ciphertext, trace ] = measure_AES( cwapi, plaintext, key )
+function [ ciphertext, trace ] = measure_AES( scope, target, plaintext, key )
 %MEASURE_AES Perform a single AES measurement.
 %   'plaintext' should be input to AES algorithm
 %   'key' should be key used in AES algorithm
 %   Returns both the ciphertext & the trace data.
 
 import py.cwapi.measure_AES
-result = measure_AES(cwapi, plaintext, key);
+result = measure_AES(scope, target, plaintext, key);
 
 %Do insane conversion
 pyct = result{1,1};

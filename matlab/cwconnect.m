@@ -1,4 +1,4 @@
-function [ cwapi ] = cwconnect( offset, totalsamples )
+function [ cwapi, scope, target ] = cwconnect( offset, totalsamples )
 %CWCONNECT Connect to a ChipWhisperer-Lite, return the object.
 %   Connects to a ChipWhisperer-Lite. You must have already configured
 %   python for this to work & have a WORKING ChipWhisperer install.s
@@ -10,9 +10,12 @@ if nargin < 1
   offset = 1250;
 end
 
-import py.cwapi.cwconnect
+cwapi = py.importlib.import_module('cwapi');
 
-cwapi = cwconnect(offset, totalsamples);
+result = cwapi.cwconnect(offset, totalsamples);
 
+cwapi = result{1,1};
+scope = result{1,2};
+target = result{1,3};
 end
 
