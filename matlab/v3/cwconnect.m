@@ -12,7 +12,7 @@ end
 
 import py.cwapi.cwconnect
 
-result = cwconnect(offset, totalsamples);
+cwapi = cwconnect(offset, totalsamples);
 
 
 end
