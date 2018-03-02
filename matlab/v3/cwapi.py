@@ -77,4 +77,4 @@ def measure_AES(api, plaintext, key):
 
     textout = list(textout)
 
-    return (textout, api.getScope().channels[0].getTrace(0))
+    return (textout, api.getScope().channels[0].getTrace(0).tolist())
