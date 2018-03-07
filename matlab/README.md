@@ -52,10 +52,10 @@ Again see https://wiki.newae.com/MATLAB_Control_of_CW-Lite for full details, the
 To run the examples, first set your MATLAB folder to the cw-apiexample\matlab folder. You should then be able to run the following from your MATLAB prompt:
 
 ```
-cw = cwconnect()
-[cipher, trace] = measure_AES(cw, [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15],[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]);
+cw, scope, target = cwconnect()
+[cipher, trace] = measure_AES(scope, target, [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15],[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]);
 plot(trace)
 ```
 
-Note you only have to run cwconnect() once, and then simply reuse the cw object. Trying to connect again may fail if the cw object still exists. If you get this error, you can run cw.disconnect() to close the existing object and reconnect.
+Note you only have to run cwconnect() once, and then simply reuse the cw object. Trying to connect again may fail if the cw object still exists. If you get this error, you can run scope.dis() and target.dis() to close the existing object and reconnect.
 
