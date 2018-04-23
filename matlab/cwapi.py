@@ -18,6 +18,12 @@ def cwconnect(offset=1250, totalsamples=3000):
     scope.io.tio2 = "serial_tx"
     scope.io.hs2 = "clkgen"
 
+    target.baud = 38400
+    target.protver = '1.0'
+    target.key_cmd = 'k$KEY$\n'
+    target.go_cmd = 'p$TEXT$\n'
+    target.output_cmd = 'r$RESPONSE$\n'
+
     return (cw, scope, target)
 
 
@@ -25,20 +31,20 @@ def measure_AES(scope, target, plaintext, key):
     plaintext = [int(p) for p in plaintext]
     key = [int(k) for k in key]
 
-    target.reinit()
+    target.init()
 
+    # run aux stuff that should run before the scope arms here
+
+    target.reinit()
     target.setModeEncrypt()  # only does something for targets that support it
     target.loadEncryptionKey(key)
     target.loadInput(plaintext)
 
-    # run aux stuff that should run before the scope arms here
-
     scope.arm()
 
     # run aux stuff that should run after the scope arms here
-
-    target.go()
     timeout = 50
+    target.go()
     # wait for target to finish
     while target.isDone() is False and timeout:
         timeout -= 1
